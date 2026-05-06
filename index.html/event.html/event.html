@@ -1,0 +1,874 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>دليل الفعاليات- اكاديمية اغورا</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --primary: #0050d4;
+        --primary-dim: #0046bb;
+        --surface: #f5f7f9;
+        --on-surface: #2c2f31;
+        --surface-container-low: #eef1f3;
+        --surface-container-lowest: #ffffff;
+        --outline: #747779;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: var(--surface);
+        color: var(--on-surface);
+        padding-bottom: 90px; /* Space for mobile sticky booking footer */
+        overflow-x: hidden;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      .font-headline {
+        font-family: "Plus Jakarta Sans", sans-serif;
+      }
+
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+        vertical-align: middle;
+      }
+
+      /* Custom Utilities */
+      .text-primary-custom {
+        color: var(--primary) !important;
+      }
+      .bg-primary-custom {
+        background-color: var(--primary) !important;
+        color: white;
+      }
+      .bg-surface-lowest {
+        background-color: var(--surface-container-lowest) !important;
+      }
+      .bg-surface-low {
+        background-color: var(--surface-container-low) !important;
+      }
+
+      .backdrop-blur {
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+      }
+      .rounded-4xl {
+        border-radius: 2rem !important;
+      }
+      .rounded-3xl {
+        border-radius: 1.5rem !important;
+      }
+
+      .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+
+      /* Custom Hover Effects */
+      .hover-lift {
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+      .hover-lift:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0, 80, 212, 0.1) !important;
+      }
+      .image-zoom-container {
+        overflow: hidden;
+      }
+      .image-zoom {
+        transition: transform 0.7s ease;
+      }
+      .image-zoom-container:hover .image-zoom {
+        transform: scale(1.1);
+      }
+
+      /* Stacked Avatars */
+      .avatar-stack {
+        display: flex;
+        align-items: center;
+      }
+      .avatar-stack img,
+      .avatar-stack .more-count {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        border: 2px solid white;
+        margin-left: -10px;
+        object-fit: cover;
+      }
+      .avatar-stack img:first-child {
+        margin-left: 0;
+      }
+
+      /* Responsive Image Containers */
+      .hero-img-container {
+        height: 300px;
+      }
+
+      @media (min-width: 992px) {
+        body {
+          padding-bottom: 0;
+        }
+        main {
+          padding-top: 110px;
+        }
+        .hero-img-container {
+          height: 400px; /* Fixed height for desktop to prevent it from being too huge */
+        }
+      }
+      @media (max-width: 991px) {
+        main {
+          padding-top: 80px;
+        }
+      }
+      /* Scroll to top button specific positioning */
+      .scroll-top-btn {
+        bottom: 30px;
+        right: 30px;
+        z-index: 40;
+      }
+      @media (max-width: 991px) {
+        .scroll-top-btn {
+          bottom: 100px;
+          right: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav
+      class="navbar fixed-top w-100 bg-white bg-opacity-75 backdrop-blur shadow-sm py-3 px-3 px-md-5 z-3"
+    >
+      <div
+        class="container-xl d-flex justify-content-between align-items-center"
+      >
+        <button
+          class="btn btn-light rounded-circle d-md-none p-2 text-primary-custom"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#mobileMenu"
+          aria-controls="mobileMenu"
+        >
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+
+        <a
+          class="navbar-brand text-primary-custom font-headline fw-bolder fs-4 m-0"
+          href="../index.html/index.html"
+        >
+          اكاديمية اغورا
+        </a>
+
+        <div class="d-none d-md-flex gap-4 fw-bold font-headline">
+          <a
+            class="text-dark text-decoration-none nav-link-custom"
+            href="../events.html/events.html"
+            >الدليل</a
+          >
+          <a
+            class="text-dark text-decoration-none nav-link-custom"
+            href="../about.html/about.html"
+            >من نحن</a
+          >
+          <a
+            class="text-dark text-decoration-none nav-link-custom"
+            href="../contact.html/contact.html"
+            >تواصل معنا</a
+          >
+        </div>
+
+        <div class="d-flex align-items-center gap-2 gap-md-3">
+          <button
+            class="btn btn-light rounded-circle d-none d-md-block p-2 text-primary-custom"
+          >
+            <span class="material-symbols-outlined">dark_mode</span>
+          </button>
+          <div
+            class="rounded-circle overflow-hidden border border-2 border-primary d-none d-md-block"
+            style="width: 40px; height: 40px"
+          >
+            <img
+              src="../img/profil.jpg"
+              class="w-100 h-100 object-fit-cover"
+              alt="User avatar"
+            />
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div
+      class="offcanvas offcanvas-start"
+      tabindex="-1"
+      id="mobileMenu"
+      aria-labelledby="mobileMenuLabel"
+    >
+      <div class="offcanvas-header border-bottom">
+        <h5
+          class="offcanvas-title font-headline fw-bold text-primary-custom"
+          id="mobileMenuLabel"
+        >
+         اكاديمية اغورا 
+        </h5>
+        <button
+          type="button"
+          class="btn-close shadow-none"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="d-flex flex-column gap-4 fw-bold font-headline mt-3">
+          <a
+            class="text-dark text-decoration-none fs-5 d-flex align-items-center gap-2"
+            href="../events.html/events.html"
+          >
+            <span class="material-symbols-outlined">folder</span> Directory
+          </a>
+          <a
+            class="text-dark text-decoration-none fs-5 d-flex align-items-center gap-2"
+            href="../about.html/about.html"
+          >
+            <span class="material-symbols-outlined">info</span> About
+          </a>
+          <a
+            class="text-dark text-decoration-none fs-5 d-flex align-items-center gap-2"
+            href="../contact.html/contact.html"
+          >
+            <span class="material-symbols-outlined">mail</span> Contact
+          </a>
+        </div>
+        <hr class="my-4" />
+        <div class="d-flex align-items-center gap-3">
+          <div
+            class="rounded-circle overflow-hidden border border-2 border-primary"
+            style="width: 45px; height: 45px"
+          >
+            <img
+              src="../img/profil.jpg"
+              class="w-100 h-100 object-fit-cover"
+              alt="User avatar"
+            />
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <main class="container-xl px-3 px-md-4">    
+       <div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="input-group bg-white shadow-sm rounded-pill p-2 border">
+                <span class="input-group-text border-0 bg-transparent">
+                    <i class="bi bi-search text-primary"></i>
+                </span>
+                <input  id="searchInput"
+                 type="text" 
+                 class="form-control border-0 bg-transparent" placeholder="ابحث عن اسم الفعالية...">
+            </div>
+            <div class="col-md-4"> 
+            <select id="dataFilter"
+              class="form-select bg-surface-lowest border-0 rounded-3xl py-3 px-4 shadow-sm custom-select-icon"
+            >
+              <option>هذا الاسبوع</option>
+              <option>الاسبوع القادم</option>
+              <option>هذا الشهر</option>
+            </select>
+
+             <div class="col-md-4"> 
+            <select id="categoryFilter"
+              class="form-select bg-surface-lowest border-0 rounded-3xl py-3 px-4 shadow-sm custom-select-icon">
+            <option value="all"> كل الفئات</option>
+            <option value="sport">رياضة</option>
+            <option value="cultuer">ثقافة</option>
+            <option value="music">موسيقى</option>
+
+            </select>
+            </div>
+
+        </div>
+    </div>
+</div>
+      <section class="mb-4 mb-lg-5">
+        <div
+          class="position-relative w-100 rounded-4xl overflow-hidden shadow-sm hero-img-container"
+        >
+          <img
+            src="../img/ITE.jpg"
+            class="w-100 h-100 object-fit-cover"
+            alt="غلاف الفعالية"
+          />
+          <div
+            class="position-absolute bottom-0 start-0 p-4 p-lg-5 d-none d-lg-block w-100"
+            style="
+              background: linear-gradient(
+                to top,
+                rgba(0, 0, 0, 0.8),
+                transparent
+              );
+            "
+          >
+            <div class="d-flex gap-2 mb-2">
+              <span
+                class="badge bg-white bg-opacity-25 text-white rounded-pill py-2 px-3 text-uppercase tracking-widest border border-white border-opacity-50"
+                >ندوة سنوية</span
+              >
+              <span
+                class="badge bg-primary text-white rounded-pill py-2 px-3 text-uppercase tracking-widest"
+                >تكنولوجيا</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="row g-5">
+        <div class="col-lg-8">
+          <div class="mb-5 position-relative z-1">
+            <div class="d-flex d-lg-none gap-2 mb-3 mt-n4 mt-md-0">
+              <span
+                class="badge bg-primary bg-opacity-10 text-primary-custom rounded-pill py-1 px-2 text-uppercase"
+                style="font-size: 0.65rem"
+                >Academic</span
+              >
+              <span
+                class="badge bg-primary bg-opacity-10 text-primary-custom rounded-pill py-1 px-2 text-uppercase"
+                style="font-size: 0.65rem"
+                >Technology</span
+              >
+            </div>
+
+            <h1>ندوة الذكاء الاصطناعي 2024</h1>
+           
+
+            <div
+              class="bg-surface-low rounded-4xl p-4 p-md-5 d-flex flex-column flex-md-row gap-4 justify-content-between align-items-md-center shadow-sm"
+            >
+              <div class="d-flex align-items-center gap-3">
+                <div
+                  class="bg-white rounded-circle d-flex align-items-center justify-content-center text-primary-custom shadow-sm"
+                  style="width: 50px; height: 50px"
+                >
+                  <span class="material-symbols-outlined">calendar_today</span>
+                </div>
+                <div>
+                  <p>ندوة تقنية تهدف لتسليط الضوء على مستقبل
+                    الذكاء الاصطناعي في التعليم العالي بالجامعة الافتراضية </p>
+                  <p class="fw-bold m-0 fs-6">تشرين الاول 24, 2024</p>
+
+                </div>
+              </div>
+              <div class="d-flex align-items-center gap-3">
+                <div
+                  class="bg-white rounded-circle d-flex align-items-center justify-content-center text-primary-custom shadow-sm"
+                  style="width: 50px; height: 50px"
+                >
+                  <span class="material-symbols-outlined">schedule</span>
+                </div>
+                <div>
+                  <p
+                    class="text-muted small text-uppercase fw-bold mb-1"
+                    style="font-size: 0.75rem"
+                  >
+                    الوقت
+                  </p>
+                  <p class="fw-bold m-0 fs-6">10:00 AM — 4:00 PM</p>
+                </div>
+              </div>
+              <div class="d-flex align-items-center gap-3">
+                <div
+                  class="bg-white rounded-circle d-flex align-items-center justify-content-center text-primary-custom shadow-sm"
+                  style="width: 50px; height: 50px"
+                >
+                  <span class="material-symbols-outlined">الموقع</span>
+                </div>
+                <div>
+                  <p
+                    class="text-muted small text-uppercase fw-bold mb-1"
+                    style="font-size: 0.75rem"
+                  >
+                    الموقع
+                  </p>
+                  <p class="fw-bold m-0 fs-6">القاعة الكبرى, الجناح الشرقي</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-5">
+            <h3
+              class="font-headline fw-bolder d-flex align-items-center gap-2 mb-4"
+            >
+              <span
+                class="bg-primary-custom rounded-pill"
+                style="width: 6px; height: 25px"
+              ></span>
+              نظرة عامة
+            </h3>
+            <p class="text-muted" style="line-height: 1.8; font-size: 1.1rem">
+             انضموا إلينا في رحلة غامرة لمدة يوم كامل لاستكشاف القوة
+              التحويلية للذكاء الاصطناعي. تجمع هذه الندوة فنانين رقميين مشهورين عالمياً، وعلماء كمبيوتر، وباحثين أكاديميين لتحليل كيف أن تعلم
+              . الآلة لا يقتصر على المساعدة فحسب، بل يعيد صياغة قواعد الإبداع بشكل جذري."
+            </p>
+            <p class="text-muted" style="line-height: 1.8; font-size: 1.1rem">
+             ستتضمن الفعالية ثلاث جلسات رئيسية، وورشتي عمل تفاعليتين حيث يمكن للحضور تجربة أحدث نماذج الانتشار (diffusion models)،
+             ومعرضاً ختامياً يعرض الأعمال التي تم إنتاجها بالتعاون بين الطلاب ونماذج الذكاء الاصطناعي المحلية.
+            </p>
+          </div>
+
+          <div class="mb-5">
+            <h3 class="font-headline fw-bolder mb-4">موقع الفعالية</h3>
+            <div
+              class="position-relative w-100 rounded-4xl overflow-hidden shadow-sm border"
+              style="height: 350px"
+            >
+              <img
+                src="../img/location.jpg"
+                class="w-100 h-100 object-fit-cover opacity-75"
+                alt="Map View"
+              />
+              <div class="position-absolute top-50 start-50 translate-middle">
+                <div
+                  class="bg-primary-custom text-white rounded-circle d-flex align-items-center justify-content-center shadow-lg hover-lift cursor-pointer"
+                  style="width: 50px; height: 50px"
+                >
+                  <span
+                    class="material-symbols-outlined"
+                    style="font-variation-settings: &quot;FILL&quot; 1"
+                    >push_pin</span
+                  >
+                </div>
+              </div>
+              <div
+                class="position-absolute bottom-0 start-0 m-3 m-lg-4 bg-white bg-opacity-90 backdrop-blur p-3 rounded-3xl shadow"
+              >
+                <p class="fw-bold mb-1">القاعة الكبرى, المجمع الجامعي</p>
+                <p class="text-muted small mb-0">
+                  42 حي الابتكار , طريق الاكاديمية
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="sticky-top" style="top: 120px">
+            <div
+              class="card event-card bg-surface-lowest border border-light shadow-sm rounded-4xl p-4 mb-4 d-none d-lg-block">
+              <div class="card event-card h-100 border-0 shadow-sm h-100"
+               data-date="2024-05-15"
+                data-category="تعليمية">
+            >
+              <div
+                class="d-flex justify-content-between align-items-center mb-2"
+              >
+                <span class="text-muted small fw-bold"
+                  >حالة التسجيل</span
+                >
+                <span
+                  class="badge bg-success bg-opacity-25 text-success rounded-pill px-3"
+                  >مفتوح</span
+                >
+              </div>
+              <div class="d-flex align-items-baseline gap-2 mb-4">
+                <h2 class="font-headline fw-bolder m-0">مجاني</h2>
+                <span class="text-muted small">للطلاب & اعضاء الهيئة التدريسية</span>
+              </div>
+
+              <button
+                class="btn bg-primary-custom w-100 py-3 rounded-3xl fw-bold text-white mb-3 hover-lift shadow"
+                data-bs-toggle="modal"
+                data-bs-target="#bookingModal"
+              >
+                احجز مقعدك الان
+              </button>
+
+              <div class="row g-2 mb-4">
+                <div class="col-6">
+                  <button
+                    class="btn bg-surface-low w-100 py-2 rounded-3xl text-dark fw-bold small d-flex align-items-center justify-content-center gap-2 hover-lift"
+                  >
+                    <span class="material-symbols-outlined fs-5">event</span>
+                    التقويم
+                  </button>
+                </div>
+                <div class="col-6">
+                  <button
+                    class="btn bg-surface-low w-100 py-2 rounded-3xl text-dark fw-bold small d-flex align-items-center justify-content-center gap-2 hover-lift"
+                  >
+                    <span class="material-symbols-outlined fs-5">share</span>
+                   مشاركة الفعالية
+                  </button>
+                </div>
+              </div>
+
+              <hr class="text-muted opacity-25" />
+
+              <div class="d-flex align-items-center gap-3 mt-3">
+                <div class="avatar-stack">
+                  <img
+                    src="../img/profil1.jpg"
+                    alt="User"
+                  />
+                  <img
+                    src="../img/profil2.jpg"
+                    alt="User"
+                  />
+                  
+                  <div
+                    class="more-count bg-primary-custom text-white d-flex align-items-center justify-content-center fw-bold"
+                    style="font-size: 0.6rem"
+                  >
+                    +142
+                  </div>
+                </div>
+                <span class="text-muted small fw-medium"
+                  >المسجلون حاليا</span
+                >
+              </div>
+            </div>
+
+            <div class="card event-card bg-surface-low border-0 shadow-sm rounded-4xl p-4">
+              <h6 class="font-headline fw-bolder mb-3">الجهة المنظمة</h6>
+              <div class="d-flex align-items-center gap-3">
+                <div
+                  class="bg-white rounded-circle d-flex align-items-center justify-content-center text-primary-custom shadow-sm"
+                  style="width: 50px; height: 50px; flex-shrink: 0"
+                >
+                  <span class="material-symbols-outlined">school</span>
+                </div>
+                <div>
+                  <p class="fw-bold mb-0">قسم الاعلام الرقمي </p>
+                  <p
+                    class="text-muted small mb-0 d-flex align-items-center gap-1"
+                  >
+                    <span
+                      class="material-symbols-outlined text-success"
+                      style="
+                        font-size: 1rem;
+                        font-variation-settings: &quot;FILL&quot; 1;
+                      "
+                      >verified</span
+                    >
+                    مركز اكاديمي معتمد
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="mt-5 mb-5">
+        <div class="d-flex justify-content-between align-items-end mb-4">
+          <div>
+            <p
+              class="text-primary-custom fw-bold small text-uppercase tracking-widest mb-1"
+            >
+              استكشاف
+            </p>
+            <h3 class="font-headline fw-bolder m-0">كل الفعاليات</h3>
+          </div>
+          <a
+            href="events.html"
+            class="text-primary-custom text-decoration-none fw-bold small d-none d-md-block"
+            >عرض الكل</a
+          >
+        </div>
+
+        <div
+          class="d-flex flex-nowrap flex-md-wrap gap-4 overflow-auto hide-scrollbar pb-3"
+        >
+          <div
+            class="card event-card border-0 bg-transparent"
+            data-category="cultuer"
+            data-date="2024-10-30"
+            data-title="ثقافة"
+            style="min-width: 260px; flex: 1"
+          >
+            <div
+              class="image-zoom-container rounded-4xl mb-3 position-relative"
+              style="height: 200px"
+            >
+              <img
+                src="../img/cultuer.jpg"
+                class="image-zoom w-100 h-100 object-fit-cover"
+                alt="Event"
+              />
+              <span
+                class="position-absolute top-0 start-0 m-3 badge bg-white text-dark rounded-pill px-3 py-2 shadow-sm"
+                >30 اكتوبر</span
+              >
+            </div>
+            <h5 class="font-headline fw-bold">ثقافة </h5>
+            <p class="text-muted small mb-0">
+              معرض ريحان للواحات الفنية 
+            </p>
+            <div class="mt-3">
+            <a href="../event.html/details-cultuer.html" class="btn bg-primary-custom w-100 py-2 rounded-pill fw-bold text-white text-decoration-none text-center d-block">
+            عرض التفاصيل
+            </a>
+            </div>
+            </div>
+
+          <div
+            class="card event-card border-0 bg-transparent"
+            data-category="sport"
+            data-date="2024-10-28"
+            data-title="رياضة"
+            style="min-width: 260px; flex: 1"
+          >
+            <div
+              class="image-zoom-container rounded-4xl mb-3 position-relative"
+              style="height: 200px"
+            >
+              <img
+                src="../img/sport.jpg"
+                class="image-zoom w-100 h-100 object-fit-cover"
+                alt="Event"
+              />
+              <span
+                class="position-absolute top-0 start-0 m-3 badge bg-white text-dark rounded-pill px-3 py-2 shadow-sm"
+                >28 اكتوبر</span
+              >
+            </div>
+            <h5 class="font-headline fw-bold">
+              رياضة 
+            </h5>
+            <p class="text-muted small mb-0">
+              كرة القدم : بطولة الخريجين 2024
+            </p>
+            <div class="mt-3">
+           <a href="../event.html/details-sports.html" class="btn bg-primary-custom w-100 py-2 rounded-pill fw-bold text-white text-decoration-none text-center d-block">
+             عرض التفاصيل
+            </a>
+          </div>
+          </div>
+
+          <div
+            class="card event-card border-0 bg-transparent"
+            data-category="music"
+            data-date="2024-10-26"
+            data-title="موسيقى"
+            style="min-width: 260px; flex: 1"
+          >
+            <div
+              class="image-zoom-container rounded-4xl mb-3 position-relative"
+              style="height: 200px"
+            >
+              <img
+                src="../img/music.jpg"
+                class="image-zoom w-100 h-100 object-fit-cover"
+                alt="Event"
+              />
+              <span
+                class="position-absolute top-0 start-0 m-3 badge bg-white text-dark rounded-pill px-3 py-2 shadow-sm"
+                >26 اكتوبر</span
+              >
+            </div>
+            <h5 class="font-headline fw-bold">موسيقى</h5>
+            <p class="text-muted small mb-0">
+             استمتع باجمل المقطوعات الموسيقية .
+            </p>
+            <div class="mt-3">
+            <a href="../event.html/details-music.html" class="btn bg-primary-custom w-100 py-2 rounded-pill fw-bold text-white text-decoration-none text-center d-block">
+             عرض التفاصيل
+            </a>
+           </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-surface-low py-5 px-3 px-md-5 mt-5 d-none d-md-block">
+      <div class="container-fluid max-w-7xl">
+        <div class="row g-5">
+          <div class="col-md-3">
+            <h4 class="font-headline fw-bold mb-3">اكاديمية اغورا</h4>
+            <p class="text-muted small">
+              لوجهة الأولى لتنظيم واستكشاف الحياة الجامعية الافتراضية
+              . وتعزيز التميز الأكاديمي والتواصل الاجتماعي
+            </p>
+          </div>
+          <div class="col-md-3">
+            <h5 class="font-headline fw-bold small text-uppercase mb-3">
+              روابط سريعة
+            </h5>
+            <ul class="list-unstyled text-muted small">
+              <li class="mb-2">
+                <a href="events.html" class="text-decoration-none text-muted"
+             >فعاليات</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="events.html" class="text-decoration-none text-muted"
+            >الدليل</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="about.html" class="text-decoration-none text-muted"
+            >من نحن</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h5 class="font-headline fw-bold small text-uppercase mb-3">
+              فريق المشروع
+            </h5>
+            <ul class="list-unstyled text-muted small">
+             
+              <li class="mb-2">Noorulhuda Alkhfaji - ID: noorulhuda_300282</li>
+              <li class="mb-2">Najat Nasry - ID: naja_203083</li>
+              <li class="mb-2">Ghalia Saab - ID: ghalia_295085</li>
+            </ul>
+          </div>
+          <div class="col-md-2">
+            <h5 class="font-headline fw-bold small text-uppercase mb-3">
+              معلومات التواصل
+            </h5>
+            <p class="text-muted small mb-1">
+              شارع الجامعة بناء 12<br />hello@academicagora.edu
+            </p>
+            <p class="text-primary-custom fw-bold small mt-2">
+              +1 (555) 000-AGORA
+            </p>
+          </div>
+        </div>
+        <div
+          class="border-top border-secondary border-opacity-25 mt-5 pt-4 d-flex justify-content-between align-items-center"
+        >
+          <p class="text-muted small m-0">
+            © 2026 اكاديمية اغورا . جميع الحقوق محفوظة 
+          </p>
+          <div class="d-flex gap-3">
+            <a href="contact.html" class="text-decoration-none text-muted small"
+              >فريق الدعم</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div
+      class="fixed-bottom bg-white bg-opacity-90 backdrop-blur border-top shadow-lg p-3 d-block d-lg-none z-3"
+    >
+      <div class="d-flex justify-content-between align-items-center gap-3">
+        <div>
+          <p class="text-muted small mb-0" style="font-size: 0.7rem">
+            Ticket Price
+          </p>
+          <p class="font-headline fw-bolder fs-5 m-0 text-dark">
+            Free
+            <span class="text-muted fw-normal" style="font-size: 0.8rem"
+              >/ Student</span
+            >
+          </p>
+        </div>
+        <button
+          class="btn bg-primary-custom fw-bold rounded-pill px-4 py-3 shadow w-50"
+          data-bs-toggle="modal"
+          data-bs-target="#bookingModal"
+        >
+          Book Seat
+        </button>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="bookingModal"
+      tabindex="-1"
+      aria-labelledby="bookingModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 rounded-4xl shadow-lg p-3">
+          <div class="modal-header border-0 pb-0">
+            <div>
+              <h4
+                class="modal-title font-headline fw-bolder"
+                id="bookingModalLabel"
+              >
+                 تأكيد الحضور
+              </h4>
+              <p class="text-muted small mb-0">Future of AI in Creative Arts</p>
+            </div>
+            <button
+              type="button"
+              class="btn-close bg-surface-low rounded-circle p-2 shadow-none"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="bg-surface-low rounded-3xl p-3 mb-4">
+              <p
+                class="text-muted small text-uppercase fw-bold tracking-widest mb-1"
+                style="font-size: 0.7rem"
+              >
+                نوع التذكرة
+              </p>
+              <p class="fw-bold m-0 text-dark">دخول عام (طالب)</p>
+            </div>
+            <div class="mb-4">
+              <label
+                class="form-label text-muted small text-uppercase fw-bold tracking-widest"
+                style="font-size: 0.7rem"
+                >Institutional Email</label
+              >
+              <input
+                type="email"
+                class="form-control bg-surface-low border-0 rounded-3xl px-4 py-3 shadow-none"
+                placeholder="name@university.edu"
+              />
+              
+            </div>
+            <button
+              class="btn bg-primary-custom w-100 py-3 rounded-3xl fw-bold text-white shadow hover-lift"
+              data-bs-dismiss="modal"
+            >
+              Confirm Booking
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button
+      onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+      class="btn bg-primary-custom text-white rounded-circle shadow-lg d-flex align-items-center justify-content-center position-fixed scroll-top-btn hover-lift"
+      style="width: 55px; height: 55px; border: none"
+    >
+      <span class="material-symbols-outlined fw-bold">arrow_upward</span>
+    </button>
+   <script src="../js/script.js"></script>
+  </body>
+</html>
