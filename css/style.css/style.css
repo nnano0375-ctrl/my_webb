@@ -1,0 +1,69 @@
+:root {
+        --primary: #0050d4;
+        --primary-dim: #0046bb;
+        --surface: #f5f7f9;
+        --on-surface: #2c2f31;
+        --surface-container-low: #eef1f3;
+        --surface-container-lowest: #ffffff;
+        --outline: #747779;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: var(--surface);
+        color: var(--on-surface);
+        padding-bottom: 80px; /* For mobile bottom nav */
+        overflow-x: hidden;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      .font-headline {
+        font-family: "Plus Jakarta Sans", sans-serif;}
+       :root{
+        --primary: #0050d4;
+        --primary-dim: #0046bb;
+        --surface: #f5f7f9;
+        --on-surface: #2c2f31;
+        --surface-container-low: #eef1f3;
+        --surface-container-lowest: #ffffff;
+        --outline: #747779;
+       }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: var(--surface);
+        color: var(--on-surface);
+        padding-bottom: 80px; /* For mobile bottom nav */
+        overflow-x: hidden;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      .font-headline {
+        font-family: "Plus Jakarta Sans", sans-serif;
+      }
+      /* --- تنسيق زر العودة للأعلى --- */
+.bg-primary-custom.rounded-circle {
+    display: flex !important;
+    align-items: center !important;    /* توسيط السهم عمودياً */
+    justify-content: center !important; /* توسيط السهم أفقياً */
+    width: 50px;
+    height: 50px;
+    padding: 0 !important;
+}
+
+/* لضمان ظهور السهم الأبيض بشكل واضح */
+.bg-primary-custom.rounded-circle .material-symbols-outlined {
+    font-size: 28px !important;
+    color: white !important;
+    line-height: 1 !important;
+}
